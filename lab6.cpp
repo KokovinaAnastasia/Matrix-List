@@ -6,6 +6,7 @@ using namespace std;
 
 int main()
 {
+
 	Matrix3x3 matr = Matrix3x3::Matrix3x3();
 	matr.fillRandomElements(-10, 10);
 	for (int i = 0; i < 3; i++)
