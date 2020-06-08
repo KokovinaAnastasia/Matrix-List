@@ -4,12 +4,12 @@
 
 using namespace std;
 
-MatrixNxN::MatrixNxN(const int dimension)
+MatrixNxN::MatrixNxN(const int iDim)
 {
-	arr = new int*[dimension];
-	for (int i = 0; i < dimension; i++)
-		arr[i] = new int[dimension];
-	size = dimension;
+	arr = new int*[iDim];
+	for (int i = 0; i < iDim; i++)
+		arr[i] = new int[iDim];
+	size = iDim;
 }
 
 int MatrixNxN::element(const int i, const int j) const
@@ -87,3 +87,10 @@ int MatrixNxN::maxColumn(const int iCol) const
 	}
 	return max;
 };
+
+void MatrixNxN::deleteArray()
+{
+	for (int i = 0; i < size; i++)
+		delete[] arr[i];
+	delete[] arr;
+}

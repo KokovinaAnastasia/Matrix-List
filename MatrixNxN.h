@@ -2,20 +2,23 @@
 class MatrixNxN
 {
 public:
-	MatrixNxN(const int dimension);
+	MatrixNxN(const int iDim);
 
 	int size;
 	int element(const int i, const int j) const;
 	void setElement(const int i, const int j, const int value);
 	void fillRandomElements(const int minVal, const int maxVal);
+
 	int sumPrincipalDiag()const;
 	int sumSecondaryDiag()const;
 	int productPrinsipalDiag() const;
 	int productSecondaryDiag() const;
 	int sumRow(const int iRow) const;
+
 	int minColumn(const int iCol) const;
 	int maxColumn(const int iCol) const;
-	void del();
+
+	void deleteArray();
 private:
-	int**arr;
+	int** arr;
 };

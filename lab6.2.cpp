@@ -12,7 +12,7 @@ int main()
 	for (int i = 0; i < matr.size; i++)
 	{
 		for (int j = 0; j < matr.size; j++)
-			cout << matr.element(i, j) << "\t";
+			cout << matr.element(i, j) << " ";
 		cout << endl;
 	};
 	cout << endl;
@@ -27,6 +27,9 @@ int main()
 		cout << "MaxInColumn" << i + 1 << " = " << matr.maxColumn(i) << endl;
 		cout << "MinInColumn" << i + 1 << " = " << matr.minColumn(i) << endl << endl;
 	}
+
+	matr.deleteArray();
+
 	system("pause");
 	return 0;
 }
